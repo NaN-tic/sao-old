@@ -1,8 +1,10 @@
-Version 4.0.2 - 2016-07-04
-* Bug fixes (see mercurial logs for details)
-
-Version 4.0.1 - 2016-05-11
-* Bug fixes (see mercurial logs for details)
+* Limit readonly state for xxx2Many
+* Simplify login with single database 
+* Show records names in relate window title
+* Add support for count on Action Window Domains
+* Manage custom login process
+* Add erase on Many2One
+* Re-position icons on Many2One widget
 
 Version 4.0.0 - 2016-05-02
 * Bug fixes (see mercurial logs for details)

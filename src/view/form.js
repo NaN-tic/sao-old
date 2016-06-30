@@ -2174,7 +2174,6 @@
                 view_ids: (attributes.view_ids || '').split(','),
                 views_preload: attributes.views || {},
                 row_activate: this.activate.bind(this),
-                readonly: attributes.readonly || false,
                 exclude_field: attributes.relation_field || null,
                 pre_validate: attributes.pre_validate
             });
@@ -2256,18 +2255,15 @@
                         this.screen.set_current_record(null);
                     }
                 }
-                var readonly = false;
                 var domain = [];
                 var size_limit = null;
                 if (record) {
-                    readonly = field.get_state_attrs(record).readonly;
                     domain = field.get_domain(record);
                     size_limit = record.expr_eval(this.attributes.size);
                 }
                 if (!Sao.common.compare(this.screen.domain, domain)) {
                     this.screen.domain = domain;
                 }
-                this.screen.group.set_readonly(readonly);
                 this.screen.size_limit = size_limit;
                 this.screen.display();
             }.bind(this));
@@ -2694,7 +2690,6 @@
                 'view_ids': (this.attributes.view_ids || '').split(','),
                 'mode': ['form'],
                 'views_preload': this.attributes.views,
-                'readonly': this.attributes.readonly || false,
                 'context': context
             });
             screen.new_group([this.screen.current_record.id]);
