@@ -52,7 +52,7 @@
                     '<nav class="navbar navbar-default toolbar" role="navigation">' +
                     '<div class="container-fluid">' +
                     '<div class="navbar-header">' +
-                    '<a class="navbar-brand" href="#"></a>' +
+                    '<a class="navbar-brand toolbar-brand hidden-xs hidden-sm" href="#"></a>' +
                     '<button type="button" class="navbar-toggle collapsed" ' +
                     'data-toggle="collapse" ' +
                     'data-target="#navbar-' + this.id + '">' +
@@ -65,7 +65,7 @@
                     '</div>' +
                     '<div class="collapse navbar-collapse" ' +
                     'id="navbar-' + this.id + '">' +
-                    '<ul class="nav navbar-nav">' +
+                    '<ul class="nav navbar-nav toolbar">' +
                     '<li class="dropdown">' +
                     '<a href="#" class="dropdown-toggle" ' +
                     'data-toggle="dropdown" role="button" ' +
