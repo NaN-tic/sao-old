@@ -52,7 +52,7 @@
                     '<nav class="navbar navbar-default toolbar" role="navigation">' +
                     '<div class="container-fluid">' +
                     '<div class="navbar-header">' +
-                    '<a class="navbar-brand toolbar-brand hidden-xs hidden-sm" href="#"></a>' +
+                    '<a class="navbar-brand toolbar-brand hidden-xs hidden-sm hidden-md" href="#"></a>' +
                     '<button type="button" class="navbar-toggle collapsed" ' +
                     'data-toggle="collapse" ' +
                     'data-target="#navbar-' + this.id + '">' +
