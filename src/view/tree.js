@@ -1512,6 +1512,7 @@
         },
         render: function(record) {
             var button = new Sao.common.Button(this.attributes);
+            button.el.addClass('btn-xs');
             button.el.click([record, button], this.button_clicked.bind(this));
             var fields = jQuery.map(this.screen.model.fields,
                 function(field, name) {
