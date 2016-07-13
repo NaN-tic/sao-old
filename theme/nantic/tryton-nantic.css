@@ -99,7 +99,13 @@ body {
   min-height:35px !important;
 }
 
-/* btn */
+/* Alert */
+.alert {
+  background-color: #f5f5f5;
+  border-color:  #f5f5f5;
+}
+
+/* Btn */
 .btn-default {
   color: #0097c8;
   background-color: #f5f5f5;
@@ -147,6 +153,7 @@ fieldset[disabled] .btn-default:focus,
 fieldset[disabled] .btn-default.focus {
   background-color: #f5f5f5;
 }
+
 .btn-default .badge {
   color: #0097c8;
   background-color: #f5f5f5;
@@ -155,17 +162,76 @@ fieldset[disabled] .btn-default.focus {
   color: #0097c8;
 }
 
-/* tabs */
+.btn-primary {
+  color: #ffffff;
+  background-color: #86b693;
+  border-color: #6c9f7a;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #ffffff;
+  background-color: #86b693;
+}
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #6c9f7a;
+  border-color: #578e67;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #86b693;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #fff;
+  background-color: #86b693;
+  border-color: #6c9f7a;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  background-color: #86b693;
+  border-color: #6c9f7a;
+}
+
+.btn-link {
+  color: #6c9f7a;
+}
+.btn-link:hover {
+  color: #86b693;
+}
+
+/* Tabs */
 .nav-tabs>li>a {
-  color:#585858;
-  background-color: #D8E4E4; 
+  color: #949494;
+  background-color: #ffffff; 
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   border-top: 1px solid #d9d9d9;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
   color: #000;
-  background-color: #fbfbfb;
+  background-color: #f6f8f8;
   border-left: 1px solid #bdd3d9;
   border-right: 1px solid #bdd3d9;
   border-top: 1px solid #bdd3d9;
@@ -178,10 +244,42 @@ fieldset[disabled] .btn-default.focus {
   border-top: 1px solid #95bbc6;
 }
 
-/* form */
-.form-one2many-content, .form-many2many-content {
+/* Tree */
+.treeview>table.tree>thead>tr>th {
+  background-color: #86b693;
+  color: #fff;
+  font-family: DINNext-Bold;
+}
+.table-hover>tbody>tr:hover {
+  background-color: #D8E4E4;
 }
 
+/* Form */
+.input-sm {
+  height: 22px;
+  padding: 2px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.input-group-sm>.form-control,
+.input-group-sm>.input-group-addon,
+.input-group-sm>.input-group-btn>.btn {
+  height: 25px;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+textarea.form-control {
+  min-height: 200px;
+}
+.form-timedelta input {
+  min-width: 50px;
+}
+
+.form-one2many-content, .form-many2many-content {
+}
 .form-char input, .form-many2one input, .global-search-container input {
   border: 0;
   border-bottom: 1px solid lightgray;
@@ -190,13 +288,9 @@ fieldset[disabled] .btn-default.focus {
   padding: 0;
   -webkit-box-shadow: none;
 }
-
 .form-char input, .form-many2one input {
-  padding: 10px !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+  padding: 0px !important;
 }
-
 .form-selection select{
   border: 0;
   padding: 0px;
@@ -208,7 +302,6 @@ fieldset[disabled] .btn-default.focus {
   appearance: none;
   background: url(menu-down.png) no-repeat right white; /* TODO .glyphicon-menu-down */
 }
-
 .form-many2one .btn-default {
   border: 0;
   box-shadow: none !important;
@@ -219,12 +312,25 @@ fieldset[disabled] .btn-default.focus {
   appearance: none;
   background-color: #fff;
 }
-
-/* table */
-.table-hover > tbody > tr:hover {
-  background-color: #86b693;
+.form-label {
+  padding-top: 2px !important;
 }
 
+.form-control {
+  box-shadow: none!important;
+}
+/*
+.form-control:focus{
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+*/
+
+/* Global Search */
+.global-search-container input {
+  padding-left: 10px;
+}
 /* Screen */
 .pagination-toolbar {
   text-align: right;
