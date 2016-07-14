@@ -416,7 +416,7 @@
         init: function(record, callback) {
             this.resource = record.model.name + ',' + record.id;
             this.note_callback = callback;
-            var context = record.get_context();
+            var context = jQuery.extend({}, record.get_context());
             context.resource = this.resource;
             var screen = new Sao.Screen('ir.note', {
                 domain: [['resource', '=', this.resource]],
