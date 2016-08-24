@@ -930,6 +930,10 @@
         init: function(fields, context) {
             this.fields = {};
             this.strings = {};
+            this.update_fields(fields);
+            this.context = context;
+        },
+        update_fields: function(fields) {
             for (var name in fields) {
                 var field = fields[name];
                 if (field.searchable || (field.searchable === undefined)) {
@@ -937,7 +941,6 @@
                     this.strings[field.string.toLowerCase()] = field;
                 }
             }
-            this.context = context;
         },
         parse: function(input) {
             try {

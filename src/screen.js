@@ -1188,7 +1188,7 @@
             return jQuery.when();
         },
         domain_parser: function() {
-            var view_id, view_tree;
+            var view_id, view_tree, domain_parser;
             if (this.current_view) {
                 view_id = this.current_view.view_id;
             } else {
@@ -1202,6 +1202,7 @@
                 this.model.execute('fields_view_get', [false, 'tree'],
                         this.context).then(function(view) {
                     this.fields_view_tree[view_id] = view;
+                    domain_parser.update_fields(view.fields);
                 }.bind(this));
                 view_tree = {};
                 view_tree.fields = {};
@@ -1279,7 +1280,7 @@
             var context = jQuery.extend({},
                     this.model.session.context,
                     this.context);
-            var domain_parser = new Sao.common.DomainParser(
+            domain_parser = new Sao.common.DomainParser(
                     fields, context);
             this._domain_parser[view_id] = domain_parser;
             return domain_parser;
