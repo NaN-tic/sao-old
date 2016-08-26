@@ -254,6 +254,10 @@ fieldset[disabled] .btn-primary.focus {
   background-color: #D8E4E4;
 }
 
+.sortable > .glyphicon-triangle-bottom {
+  color: #fff;
+}
+
 /* Form */
 .input-sm {
   height: 22px;
