@@ -1060,7 +1060,7 @@
                 'locale': moment.locale()
             });
             this.date.css('width', this._width);
-            this.date.on('dp.hide', this.focus_out.bind(this));
+            this.date.on('dp.change', this.focus_out.bind(this));
         },
         get_format: function(record, field) {
             return field.date_format(record);
@@ -3591,7 +3591,7 @@
                 'format': Sao.common.moment_format(this.format),
                 'locale': moment.locale()
             });
-            this.input.on('dp.hide',
+            this.input.on('dp.change',
                     this.parent_widget.focus_out.bind(this.parent_widget));
         },
         get_value: function() {
