@@ -49,11 +49,9 @@ this repository contains the full copyright notices and license terms. -->
                     <a id="logo" class="navbar-brand" href="#">
                         <img src="theme/default/logo.png" class="logo" title="Tryton Nan·TIC" alt="Tryton Nan·TIC">
                     </a>
-                    <button id="toggle-menu" type="button" class="navbar-toggle collapsed"
+                    <button id="toggle-menu" type="button" class="btn btn-default btn-xs toggle-menu"
                         data-toggle="offcanvas">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="glyphicon glyphicon-menu-hamburger glyphicon-toggle-menu" aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="user_menu_collapse">
@@ -71,7 +69,7 @@ this repository contains the full copyright notices and license terms. -->
                 style="height: calc(100vh - 50px - 1px - 20px);">
                 <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="menu" role="navigation"
                     style="overflow-y: auto; height: 100%;"></div>
-                <div class="col-xs-12 col-md-9" style="overflow-y: auto; height: 100%;">
+                <div class="col-xs-12 col-md-9 main-screen-offcanvas" style="overflow-y: auto; height: 100%;">
                     <div id="tabs" role="tabpanel">
                         <ul class="nav nav-tabs" role="tablist">
                         </ul>
@@ -85,8 +83,12 @@ this repository contains the full copyright notices and license terms. -->
             jQuery(function() {
                     jQuery('[data-toggle="offcanvas"]').click(function() {
                         jQuery('.row-offcanvas').toggleClass('active');
+                        jQuery('.main-screen-offcanvas').toggleClass('full_mode');
+                        jQuery(window).trigger('resize');
                         });
                     jQuery('#tabs').on('ready', function() {
+                        if (window.matchMedia("(min-width: 991px)").matches)
+                            return;
                         if (jQuery(this).find('> .nav-tabs').children().length) {
                             jQuery('.row-offcanvas').removeClass('active');
                         } else {
