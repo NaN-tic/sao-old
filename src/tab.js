@@ -51,7 +51,7 @@
         },
         create_toolbar: function() {
             var toolbar = jQuery(
-                    '<nav class="navbar navbar-default toolbar" role="navigation">' +
+                    '<nav class="navbar-default toolbar" role="navigation">' +
                     '<div class="container-fluid">' +
                     '<div class="navbar-header">' +
                     '<a class="navbar-brand toolbar-brand hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" href="#"></a>' +
