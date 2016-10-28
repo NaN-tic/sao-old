@@ -364,6 +364,11 @@ var Sao = {};
             }).appendTo(this.content);
         },
         add_title: function(title) {
+            this.header.append(jQuery('<button/>', {
+                'type': 'button',
+                'class': 'close',
+                'data-dismiss': 'modal'
+            }).append('&times;'));
             this.header.append(jQuery('<h4/>', {
                 'class': 'modal-title'
             }).append(title));
