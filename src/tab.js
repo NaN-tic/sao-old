@@ -54,8 +54,8 @@
                     '<nav class="navbar navbar-default toolbar" role="navigation">' +
                     '<div class="container-fluid">' +
                     '<div class="navbar-header">' +
-                    '<a class="navbar-brand toolbar-brand hidden-xs hidden-sm hidden-md" href="#"></a>' +
-                    '<button type="button" class="navbar-toggle collapsed" ' +
+                    '<a class="navbar-brand toolbar-brand hidden-xs hidden-sm hidden-md hidden-lg hidden-xl" href="#"></a>' +
+                    '<button type="button" class="navbar-toggle toolbar-toggle collapsed" ' +
                     'data-toggle="collapse" ' +
                     'data-target="#navbar-' + this.id + '">' +
                     '<span class="sr-only">' +

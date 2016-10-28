@@ -62,6 +62,9 @@ body {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
 }
+.toolbar-toggle {
+  background-color: #0097c8;
+}
 
 /* Menu */
 #menu {
