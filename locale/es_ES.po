@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -374,3 +374,9 @@ msgstr "Revisión"
 
 msgid "Wizard"
 msgstr "Asistente"
+
+msgid "Favorites"
+msgstr "Favoritos"
+
+msgid "Manage favorites"
+msgstr "Gestiona los favoritos"
