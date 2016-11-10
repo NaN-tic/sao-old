@@ -211,9 +211,9 @@
                         'text': database
                     }));
                 });
+                el.val(databases[0]);
             }
             el.show();
-            el.val(database || '');
             empty_field().first().focus();
         });
         return dfd.promise();
