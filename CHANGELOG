@@ -1,3 +1,4 @@
+* Add support for size on Many2Many
 * Add favorites menu
 * Add support for datetime_field to Many2One, Reference
 * Move info-bar to the top

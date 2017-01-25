@@ -2590,9 +2590,15 @@
             this._set_button_sensitive();
         },
         _set_button_sensitive: function() {
-            var size_limit = false;
-            if (this.record() && this.field()) {
-                // TODO
+            var size_limit = false,
+                record = this.record(),
+                field = this.field();
+            if (record && field) {
+                var field_size = record.expr_eval(this.attributes.size);
+                m2m_size = field.get_eval(record).length;
+                size_limit = (((field_size !== undefined) &&
+                            (field_size !== null)) &&
+                        (m2m_size >= field_size >= 0));
             }
 
             this.entry.prop('disabled', this._readonly);
