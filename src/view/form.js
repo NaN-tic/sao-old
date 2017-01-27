@@ -2595,7 +2595,7 @@
                 field = this.field();
             if (record && field) {
                 var field_size = record.expr_eval(this.attributes.size);
-                m2m_size = field.get_eval(record).length;
+                var m2m_size = field.get_eval(record).length;
                 size_limit = (((field_size !== undefined) &&
                             (field_size !== null)) &&
                         (m2m_size >= field_size >= 0));
