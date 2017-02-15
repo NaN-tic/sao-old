@@ -193,7 +193,7 @@ var Sao = {};
             lang = (navigator.language ||
                  navigator.browserLanguage ||
                  navigator.userLanguage ||
-                 'en').replace('-', '_');
+                 'en_US').replace('-', '_');
         }
         Sao.i18n.setLocale(lang);
         moment.locale(lang.slice(0, 2));
