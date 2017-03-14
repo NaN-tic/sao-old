@@ -3637,7 +3637,7 @@
             return value;
         },
         set_value: function(value) {
-            this.date.data('DateTimePicker').date(value);
+            this.input.data('DateTimePicker').date(value);
         }
     });
 
